@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateFit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="text-2xl font-bold text-white">
+                <i class="fas fa-dumbbell text-orange-500"></i> ElevateFit
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="nav-icon"><i class="fa-solid fa-robot"></i></a></li> 
+                <li><a href="shopping.html" class="nav-icon"><i class="fa-solid fa-cart-shopping"></i></a></li> 
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Unleash Your Inner Strength</h1>
+                <p>Transform your body and mind with personalized fitness and nutrition plans.</p>
+                <a href="#plans" class="cta-button">Start Your Journey</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-me">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/personal_trainer.avif" alt="Personal Trainer Photo">
+                <p>Hi, I'm Mark T.! With over 10 years of experience in personal training and nutrition science, my mission is to help you build a healthier, stronger, and more confident version of yourself. I believe in sustainable lifestyle changes, not quick fixes. Let's achieve your goals together!</p>
+            </div>
+        </section>
+
+        <section id="plans" class="plans">
+            <h2>Workout & Diet Plans</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <img src="images/lean&toned.jpg" alt="Workout Plan 1">
+                    <h3>Lean & Toned</h3>
+                    <p>A 12-week plan focused on high-intensity interval training (HIIT) and strength conditioning to build lean muscle.</p>
+                </div>
+                <div class="plan-card">
+                    <img src="images/bulk_up.webp" alt="Workout Plan 2">
+                    <h3>Bulk Up</h3>
+                    <p>A comprehensive guide to gaining muscle mass through progressive overload and a calorie-surplus diet plan.</p>
+                </div>
+                <div class="plan-card">
+                    <img src="images/nutrition_reset.jpg" alt="Diet Plan">
+                    <h3>Nutrition Reset</h3>
+                    <p>A 30-day meal plan designed to cleanse your system, boost your metabolism, and create healthy eating habits.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Latest Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <img src="images/blog_thumbnail.webp" alt="Blog Post Thumbnail">
+                    <div class="post-content">
+                        <h3>5 Myths About Weight Lifting Debunked</h3>
+                        <p>Discover the truth behind common misconceptions and learn how strength training can benefit everyone...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="images/blog_thumbnail2.webp" alt="Blog Post Thumbnail">
+                    <div class="post-content">
+                        <h3>The Importance of a Balanced Diet</h3>
+                        <p>It's not just about calories. Learn how macronutrients play a vital role in your fitness journey...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="images/blog_thumbnail3.avif" alt="Blog Post Thumbnail">
+                    <div class="post-content">
+                        <h3>How to Stay Motivated on Your Fitness Journey</h3>
+                        <p>Tips and tricks to keep your motivation high even when you don't feel like working out...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="testimonials" class="testimonials">
+             <h2>Success Stories</h2>
+             <div class="testimonial-carousel">
+                 </div>
+             <div class="carousel-controls">
+                 <button id="prevBtn">&larr;</button>
+                 <button id="nextBtn">&rarr;</button>
+             </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Join Now & Get in Touch</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <p>Follow me on social media:</p>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ElevateFit. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

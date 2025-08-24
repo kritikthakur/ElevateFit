@@ -1,0 +1,455 @@
+/* --- General Styling & Variables --- */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --text-color: #34495e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--dark-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 60px 20px;
+}
+/* --- Header & Navigation --- */
+header {
+    /* New background color for the header */
+    background-color: rgba(17,24,39,255);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* Updated padding: top, right, bottom, left */
+    padding: 1rem 5% 1rem 1.5rem; /* Reduced left padding */
+}
+
+/* Styles for the logo and links on the new dark background */
+.logo {
+    display: flex; /* Use Flexbox for easy alignment */
+    align-items: center; /* Vertically center the icon and text */
+    gap: 10px; /* Adds a small space between the icon and text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-icon {
+    height: 35px; /* Adjust the size of your icon as needed */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    /* Removed padding, border, and border-radius to restore the clean text look */
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* A simple text color change on hover */
+}
+
+/* Style for the new icons */
+.nav-links .nav-icon {
+    font-size: 1.5rem; /* Makes icons bigger */
+    margin-left: 10px;
+}
+
+/* Styles for the mobile hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: #fff; /* Changed to white to be visible on dark header */
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/gym_bg.jpg') no-repeat center center/cover;    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e74c3c;
+}
+
+/* --- About Me Section --- */
+/* --- About Me Section --- */
+.about-me {
+    /* Add your background image here */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/gym_bg2.jpg') no-repeat center center/cover; /* <-- ADD YOUR IMAGE URL HERE */
+    
+    /* Style the section and text color */
+    color: #fff; /* Makes the paragraph text white */
+    max-width: 100%; /* Allows the section to be full-width */
+    padding: 80px 20px; /* Adds a bit more spacing */
+}
+
+.about-me h2 {
+    color: #fff; /* Makes the "About Me" heading white */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px; /* Keeps the content centered */
+    margin: 0 auto;
+}
+
+.about-content img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #fff; /* Adds a white border to lift the image */
+}
+
+/* --- Plans Section --- */
+.plans {
+    /* Add your background image for this section */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/workout&dietplan_bg.jpg') no-repeat center center/cover; /* <-- ADD YOUR IMAGE URL HERE */
+    padding: 80px 20px; /* Adds better spacing */
+}
+
+.plans h2 {
+    color: #fff; /* Makes the "Workout & Diet Plans" heading white */
+}
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.plan-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.plan-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.plan-card h3 {
+    margin: 20px 0 10px;
+}
+.plan-card p {
+    padding: 0 20px;
+}
+
+/* --- Blog Section --- */
+
+.blog {
+    /* Add your background image for this section */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/articles_bg.jpg') no-repeat center center/cover; /* <-- ADD YOUR IMAGE URL HERE */
+    padding: 80px 20px;
+}
+
+.blog h2 {
+    color: #fff; /* Makes the "Latest Articles" heading white */
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.blog-post {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.blog-post img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.post-content {
+    padding: 20px;
+}
+.post-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Testimonials Section --- */
+/* --- Testimonials Section --- */
+.testimonials {
+    /* Add your background image for this section */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/success_stories_bg.jpg') no-repeat center center/cover; /* <-- ADD YOUR IMAGE URL HERE */
+    padding: 80px 20px;
+}
+
+.testimonials h2 {
+    color: #fff; /* Makes the "Success Stories" heading white */
+    text-align: center;
+}
+
+/* This is the update for the slide itself */
+.testimonial-slide.active {
+    /* Use Flexbox for side-by-side layout */
+    display: flex;
+    align-items: center; /* Vertically center items */
+    gap: 30px; /* Space between image and text */
+    text-align: left; /* Align text to the left */
+
+    /* Frosted glass effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.testimonial-carousel {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+}
+.testimonial-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.testimonial-slide.active {
+    /* Use Flexbox for side-by-side layout */
+    display: flex;
+    align-items: center; /* Vertically center items */
+    gap: 30px; /* Space between image and text */
+    text-align: left; /* Align text to the left */
+}
+.testimonial-slide img {
+    /* Create the curved square */
+    width: 300px;
+    height: 300px;
+    border-radius: 15px; /* Adjust for more/less curve */
+    object-fit: cover; /* Ensure image covers the area */
+}
+.testimonial-content p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* Changed main text to a soft white */
+}
+.testimonial-slide .author {
+    font-weight: bold;
+    color: var(--secondary-color); /* Changed author name to the secondary color */
+}
+.testimonial-slide p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.testimonial-slide .author {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.carousel-controls button {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* --- Contact Section --- */
+/* --- Contact Section --- */
+.contact {
+    /* Black and white blended gradient. You can optionally add an image URL too. */
+    background: linear-gradient(to right, #232526, #414345); /* <-- Sleek black/grey gradient */
+    padding: 80px 20px;
+}
+
+.contact h2 {
+    color: #fff; /* Makes the heading white */
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+#contact-form {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Updated styles for the form inputs */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #fff; /* Makes the text you type white */
+}
+
+/* Style for the placeholder text */
+#contact-form input::placeholder, #contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.social-links {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+/* Updated styles for the social links */
+.social-links p {
+    color: #fff; /* Makes the "Follow me" text white */
+}
+
+.social-links a {
+    display: block;
+    margin: 10px 0;
+    color: var(--light-color); /* Makes the links light */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color); /* Changes color on hover */
+}
+
+/* --- Footer --- */
+footer {
+    background: rgba(17,24,39,255);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        background: white;
+        height: 100vh;
+        width: 60%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s ease-in;
+        padding-top: 40px;
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-active {
+        right: 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact-form {
+        width: 100%;
+    }
+}
